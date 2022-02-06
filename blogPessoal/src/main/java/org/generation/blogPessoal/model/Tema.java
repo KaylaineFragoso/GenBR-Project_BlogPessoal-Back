@@ -23,7 +23,7 @@ public class Tema {
 	private long id;
 	
 	
-	@NotNull
+	@NotNull(message = "O atributo Descrição é Obrigatório!")
 	private String descricao;
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
@@ -54,6 +54,4 @@ public class Tema {
 		this.postagem = postagem;
 	}
 	
-	
-
 }
